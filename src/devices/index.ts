@@ -11,6 +11,7 @@ import {definitions as akuvox} from "./akuvox";
 import {definitions as alchemy} from "./alchemy";
 import {definitions as aldi} from "./aldi";
 import {definitions as alecto} from "./alecto";
+import {definitions as allesin} from "./allesin";
 import {definitions as amina} from "./amina";
 import {definitions as anchor} from "./anchor";
 import {definitions as atlantic} from "./atlantic";
@@ -22,8 +23,10 @@ import {definitions as awox} from "./awox";
 import {definitions as axis} from "./axis";
 import {definitions as bacchus} from "./bacchus";
 import {definitions as bankamp} from "./bankamp";
+import {definitions as beca} from "./beca";
 import {definitions as bega} from "./bega";
 import {definitions as belkin} from "./belkin";
+import {definitions as besisglas} from "./besisglas";
 import {definitions as bitron} from "./bitron";
 import {definitions as bituoTechnik} from "./bituo_technik";
 import {definitions as blaupunkt} from "./blaupunkt";
@@ -212,6 +215,7 @@ import {definitions as megaman} from "./megaman";
 import {definitions as mercator} from "./mercator";
 import {definitions as miboxer} from "./miboxer";
 import {definitions as micromatic} from "./micromatic";
+import {definitions as miele} from "./miele";
 import {definitions as mill} from "./mill";
 import {definitions as mindy} from "./mindy";
 import {definitions as modular} from "./modular";
@@ -331,6 +335,7 @@ import {definitions as spotmau} from "./spotmau";
 import {definitions as sprut} from "./sprut";
 import {definitions as stello} from "./stello";
 import {definitions as stelpro} from "./stelpro";
+import {definitions as streda} from "./streda";
 import {definitions as stuckatprototype} from "./stuckatprototype";
 import {definitions as sunricher} from "./sunricher";
 import {definitions as superled} from "./superled";
@@ -406,6 +411,7 @@ const definitions: DefinitionWithExtend[] = [
     ...alchemy,
     ...aldi,
     ...alecto,
+    ...allesin,
     ...amina,
     ...anchor,
     ...atlantic,
@@ -417,8 +423,10 @@ const definitions: DefinitionWithExtend[] = [
     ...axis,
     ...bacchus,
     ...bankamp,
+    ...beca,
     ...bega,
     ...belkin,
+    ...besisglas,
     ...bitron,
     ...bituoTechnik,
     ...blaupunkt,
@@ -604,6 +612,7 @@ const definitions: DefinitionWithExtend[] = [
     ...mercator,
     ...miboxer,
     ...micromatic,
+    ...miele,
     ...mill,
     ...mindy,
     ...modular,
@@ -723,6 +732,7 @@ const definitions: DefinitionWithExtend[] = [
     ...sprut,
     ...stello,
     ...stelpro,
+    ...streda,
     ...stuckatprototype,
     ...sunricher,
     ...superled,

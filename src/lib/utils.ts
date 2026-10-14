@@ -559,12 +559,19 @@ export function noOccupancySince(endpoint: Zh.Endpoint, options: KeyValueAny, pu
     }
 }
 
+export function attachInputCluster(device: Zh.Device, endpoint: Zh.Endpoint, clusterKey: string) {
+    const clusterId = Zcl.Utils.getCluster(clusterKey, device.manufacturerID, device.customClusters).ID;
+
+    if (!endpoint.inputClusters.includes(clusterId)) {
+        endpoint.inputClusters.push(clusterId);
+    }
+}
+
 export function attachOutputCluster(device: Zh.Device, endpoint: Zh.Endpoint, clusterKey: string) {
     const clusterId = Zcl.Utils.getCluster(clusterKey, device.manufacturerID, device.customClusters).ID;
 
     if (!endpoint.outputClusters.includes(clusterId)) {
         endpoint.outputClusters.push(clusterId);
-        device.save();
     }
 }
 
@@ -632,7 +639,8 @@ export const ignoreUnsupportedAttribute = async (func: () => Promise<void>, fail
     try {
         await func();
     } catch (error) {
-        if ((error as Error).message.includes("UNSUPPORTED_ATTRIBUTE")) {
+        const message = (error as Error).message;
+        if (message.includes("UNSUPPORTED_ATTRIBUTE") || message.includes("UNREPORTABLE_ATTRIBUTE")) {
             logger.debug(`Ignoring unsupported attribute error: ${failMessage}`, NS);
         } else {
             throw error;
